@@ -1,21 +1,29 @@
-function sum(a, b) {
-    return a + b;
+
+function operate(firstNumber, secondNumber, operand) {
+    if (operand === "+") {
+        return firstNumber + secondNumber;
+    }
+
+     if (operand === "-") {
+        return firstNumber - secondNumber;
+    }
+
+     if (operand === "*") {
+        return firstNumber * secondNumber;
+    }
+
+     if (operand === "/") {
+        if (secondNumber === 0){
+            return "Cant divide by 0"
+        }
+        let temp = firstNumber / secondNumber; //Used for rounding 
+        return firstNumber / secondNumber;
+    }
 }
 
-function mult(a, b) {
-    return a * b;
-}
 
-function minus(a, b) {
-    return a - b;
-}
-
-function divide(a, b) {
-    let temp = a /b;
-    return Math.ceil(temp * 100) / 100;
-}
 
 let a = 20
-let b =24
+let b = 0
 
 console.log(divide(a, b))
